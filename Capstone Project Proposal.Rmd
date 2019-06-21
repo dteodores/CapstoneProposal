@@ -1,0 +1,38 @@
+Capstone Project Proposal
+Daniel Teodorescu
+
+
+1)	What is the problem you want to solve?
+Online education allows adult learners to continue their education while having a full-time job.  At the same time, the addition of online programs allow colleges and universities to increase their sources of revenues.  Do Historically Black Colleges and Universities (HBCUs) lag behind other public and private not for profit institutions in terms of online education? 
+2)	Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?
+My clients for this project will be senior leaders (presidents and vice presidents for academic affairs) at Historically Black Colleges (HBCUs) in the United States.  There are 105 HBCUs across the United States. The analysis has the potential prompt leaders to accelerate the introduction of the online degree programs at their institutions. 
+
+3)	What data are you going to use for this? How will you acquire this data?
+
+I will use the latest data from the Integrated Postsecondary Education Data System (IPEDS) available publicly at https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx
+Specifically, I will download three datasets from the IPEDS surveys:
+-Institutional Characteristics (hd2012) 
+-Fall Enrollment 2012 Survey (ef2017a_dist)
+-Fall Enrollment 2017 Survey (ef2012a_dist )
+These datasets will be merged by UNITID and will be read into R for exploratory data analysis as well as inferential statistics.  All IPEDS data sets are publicly available. See data dictionaries for a list of variables in each data set. 
+
+4)	In brief, outline your approach to solving this problem (knowing that this might change later).
+The analysis will include three steps: 
+a)	Do HBCUs have a lower % of students enrolled in online programs than other public and private, not for profit institutions after controlling for size and location?   
+R Code: A multiple linear regression (using the mlr package) will be conducted with % online students as the dependent variable. Independent variables include HBCU vs. non-HBCU, size of the institution, and location (urban, rural, and suburban).  
+b) How does the distribution of online students differ between HBCUs and non-HBCUs in terms of:  
+            -% in state students 
+-% out-of-state-students
+-% international
+R Code:  ggplot2 will be used to create a bar chart showing % in state, out of state, and international for HBCUs and non-HBCUs.
+
+c)  How did enrollments in online programs grow between 2012 and 2017 at HBCUs vs. other public and not for private institutions? 
+
+R Code:  ggplot2 will be used to create a bar charts showing % online students in 2012 and 2017 for HBCUs and non-HBCUs.
+
+
+5)	What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.
+
+The deliverables for this project will be the R code along with a paper that summarizes the results of the analysis. 
+
+
